@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>mf Website</title>
+  <style>
+    body {
+      background-color: #333;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    #content {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 50px;
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #ff5f5f;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .box {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .result {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function checkPassword() {
+      var password = document.getElementById("passwordInput").value;
+
+      if (password === "6969") {
+        showBox("yo nigga!");
+      } else {
+        showResult("abe yarr itna galat bhi kese ho sakta he?");
+      }
+    }
+
+    function showBox(text) {
+      var box = document.createElement("div");
+      box.className = "box";
+      box.textContent = text;
+
+      var content = document.getElementById("content");
+      content.innerHTML = "";
+      content.appendChild(box);
+    }
+
+    function showResult(text) {
+      var result = document.getElementById("result");
+      result.textContent = text;
+    }
+  </script>
+</head>
+<body>
+  <div id="content">
+    <h1>Welcome to the mf website nigga! </h1>
+    <p> enter the password milf if you don't have password go play madaari's game(madari na khel). :</p>
+    <input type="password" id="passwordInput">
+    <button onclick="checkPassword()">Submit</button>
+
+    <div id="result" class="result"></div>
+  </div>
+</body>
+</html>
